@@ -1,0 +1,318 @@
+:root {
+  /* ===== Colors ===== */
+  --color-primary: #626a4b;
+  --color-primary-hover: #7b8940;
+  --color-accent: #A5A58D;
+
+  --bg-main: #F6F5F2;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #EEEDE8;
+
+  --border-default: #D6D3C8;
+  --border-muted: #B7B7A4;
+
+  --text-heading: #2F2F2F;
+  --text-body: #4A4A4A;
+  --text-muted: #7A7A7A;
+  --text-inverse: #FFFFFF;
+
+  --success: #7F9C6E;
+  --warning: #C9A24D;
+  --error: #B56576;
+
+  --focus-ring: #6B705C;
+
+  /* ===== Typography ===== */
+  --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+
+  /* ===== Spacing ===== */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* ===== Radius ===== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 2px 6px rgba(0,0,0,0.08);
+
+  /* ===== Buttons ===== */
+  --btn-height-sm: 32px;
+  --btn-height-md: 40px;
+  --btn-height-lg: 48px;
+  --btn-radius: 6px;
+
+  /* ===== Inputs ===== */
+  --input-height-sm: 32px;
+  --input-height-md: 40px;
+  --input-height-lg: 48px;
+
+  --input-radius: 6px;
+
+  --input-padding-x: 12px;
+  --input-padding-y: 8px;
+}
+
+
+* {
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 7fr;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.content {
+    grid-area: 2 / 2 / 3 / 3; 
+    display: grid;
+    grid-template: 1fr 10fr 1fr 10fr/ 2fr 1fr;
+    min-height: 0;
+    min-width: 0;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.heading-your-projects{
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.your-projects {
+    display: grid;
+    min-height: 0;
+    min-width: 0;
+    grid-area: 2 / 1 / 5 / 2;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+    padding: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.heading-announcements{
+    display: flex;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.announcement-side {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.heading-trending {
+    display: flex;
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.trending-people {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+/* hier beginnt das styling für die sidebar*/
+
+.sidebar {
+    display: grid;
+    grid-template: 1fr 1fr 8fr 2fr / 1fr;
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: var(--bg-subtle); 
+}
+.test {
+    grid-area: 1 / 1 / 3 / 2;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 2rem;
+    border-bottom: solid 1px var(--border-default);
+}
+.top-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.cloud {
+    display: flex;
+    width: 2rem; 
+    margin-right: 1rem;
+}
+.dashboard > a {
+    display: flex;
+    list-style: none;
+    color: var(--text-heading);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xl);
+    text-decoration: none;
+}
+
+.main-sidebar-elements{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    grid-area: 3 / 1 / 3 / 2;
+    margin: 3rem 0px;
+    
+}
+.main-sidebar-elements > li {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 2rem;
+}
+.main-sidebar-elements > li > a {
+    color: var(--color-primary);
+    list-style: none;
+    text-decoration: none;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-lg)
+}
+
+.settings-sidebar-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0px 2rem;
+    border-top: solid 1px var(--border-default);
+}
+.settings-sidebar-elements > li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.settings-sidebar-elements > li > a {
+    color: var(--color-primary);
+    list-style: none;
+    text-decoration: none;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-sm)
+}
+.sidebar > ul > li > a:hover {
+    color: var(--color-primary-hover);
+}
+
+/* hier beginnt das styling für den header */
+
+header {
+    display: grid;
+    grid-template: 1fr 3fr / 2fr 1.5fr;
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--bg-main);
+    height: 10rem;
+    box-shadow: var(--shadow-md)
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+.form-search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+}
+.magnify-glass {
+    display: flex;
+    
+}
+.magnify-button {
+  all: unset;              
+  display: inline-flex;    
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 5px;
+  width: var(--input-height-sm)
+}
+#searchbox {
+    outline: none;
+    border: solid 1px var(--border-default);
+    border-radius: var(--radius-sm);
+    height: var(--input-height-sm);
+    width: 80%;
+    box-shadow: var(--shadow-sm);
+}
+#searchbox:hover:focus {
+    border: solid 1px var(--focus-ring);
+}
+#searchbox:hover {
+    border: solid 1px var(--color-primary-hover)
+}
+
+.profile-use {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.bell, .account{
+    display: flex;
+    width: 20px;
+}
+.name-profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0px 5px;
+
+}
+
+
+
+.account-lg{
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    margin-right: 10px;
+}
+.hi{
+    display: flex;
+}
+.profile-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
